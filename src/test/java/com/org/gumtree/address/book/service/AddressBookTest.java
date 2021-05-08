@@ -33,7 +33,7 @@ public class AddressBookTest {
     }
 
     @Test
-    @DisplayName("who is the oldest person in the address book?")
+    @DisplayName("Who is the oldest person in the address book?")
     public void shouldReturnOldestPersonFromTheAddressBook() {
         when(peoplesDataParser.getPeople()).thenReturn(getMockPeoplesData());
         assertThat(addressBook.getOldestPerson().getName()).isEqualTo("Wes Jackson");
@@ -41,9 +41,11 @@ public class AddressBookTest {
     }
 
     @Test
-    @DisplayName("how many days older is Bill than Paul?")
+    @DisplayName("How many days older is Bill than Paul?")
     public void shouldReturnOlderPersonAgeInDays() {
+        when(peoplesDataParser.getPeople()).thenReturn(getMockPeoplesData());
         assertThat(addressBook.getAgeDifferenceInDays("Bill McKnight", "Paul Robinson")).isEqualTo(2862);
+        verify(peoplesDataParser, times(2)).getPeople();
     }
 
     private List<Person> getMockPeoplesData() {
