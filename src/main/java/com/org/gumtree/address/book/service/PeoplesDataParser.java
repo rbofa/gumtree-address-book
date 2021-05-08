@@ -13,9 +13,14 @@ import java.util.stream.Stream;
 public class PeoplesDataParser {
 
     private static String fileName = "input/AddressBook";
+    private List<Person> people;
+
+    public PeoplesDataParser() {
+        this.people = loadAndReadAddressBookFile();
+    }
 
     public List<Person> getPeople() {
-        return loadAndReadAddressBookFile();
+        return this.people;
     }
 
     private List<Person> loadAndReadAddressBookFile() {
