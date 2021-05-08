@@ -21,4 +21,8 @@ public class AddressBook {
         return peoplesDataParser.getPeople().stream()
                 .min(Comparator.comparing(Person::getDob)).get();
     }
+
+    public long getAgeDifferenceInDays(String bill_mcKnight, String paul_robinson) {
+        return 0;
+    }
 }

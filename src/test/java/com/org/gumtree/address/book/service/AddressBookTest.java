@@ -40,6 +40,12 @@ public class AddressBookTest {
         verify(peoplesDataParser, times(1)).getPeople();
     }
 
+    @Test
+    @DisplayName("how many days older is Bill than Paul?")
+    public void shouldReturnOlderPersonAgeInDays() {
+        assertThat(addressBook.getAgeDifferenceInDays("Bill McKnight", "Paul Robinson")).isEqualTo(2862);
+    }
+
     private List<Person> getMockPeoplesData() {
         List<Person> people = new ArrayList<>();
         people.add(new Person("Bill McKnight", "Male", "16/03/77"));
