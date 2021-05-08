@@ -3,7 +3,6 @@ package com.org.gumtree.address.book.service;
 import com.org.gumtree.address.book.domain.Person;
 
 import java.util.Comparator;
-import java.util.stream.Collectors;
 
 import static java.time.temporal.ChronoUnit.DAYS;
 
