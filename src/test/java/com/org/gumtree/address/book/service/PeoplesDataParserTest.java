@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class PeoplesDataParserTest {
 
     @Test
-    @DisplayName("fetching the peoples data from a given file")
+    @DisplayName("Fetching the peoples data from a given file")
     public void shouldReturnAllPeoplesData() {
         PeoplesDataParser peoplesDataParser = new PeoplesDataParser();
         List<Person> peoples = peoplesDataParser.getPeople();
