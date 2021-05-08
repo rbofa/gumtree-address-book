@@ -37,4 +37,10 @@ public class AddressBookTest {
         assertThat(addressBook.getMalesCount()).isEqualTo(3);
         verify(peoplesDataParser, times(1)).getPeople();
     }
+
+    @Test
+    @DisplayName("who is the oldest person in the address book?")
+    public void shouldReturnOldestPersonFromTheAddressBook() {
+        assertThat(addressBook.getOldestPerson().getName()).isEqualTo("Wes Jackson");
+    }
 }
