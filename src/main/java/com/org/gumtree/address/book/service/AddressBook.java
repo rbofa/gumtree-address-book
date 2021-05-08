@@ -11,7 +11,7 @@ public class AddressBook {
     private PeoplesDataParser peoplesDataParser;
 
     public AddressBook() {
-        peoplesDataParser = new PeoplesDataParser();
+        peoplesDataParser = new PeoplesDataParser("AddressBook");
     }
 
     public long getMalesCount() {
